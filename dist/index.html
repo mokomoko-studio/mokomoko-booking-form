@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f8fbfd" />
+    <meta name="description" content="MOKOMOKO 寵物攝影預約表單" />
+    <title>MOKOMOKO 寵物攝影預約</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2371acde'/%3E%3Cpath d='M18 35c0-9 6-16 14-16s14 7 14 16c0 7-5 12-14 12S18 42 18 35Z' fill='white'/%3E%3Ccircle cx='25' cy='31' r='2.5' fill='%235d4e59'/%3E%3Ccircle cx='39' cy='31' r='2.5' fill='%235d4e59'/%3E%3Cpath d='M29 37c2 2 4 2 6 0' fill='none' stroke='%235d4e59' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro" aria-labelledby="form-title">
+        <p class="eyebrow">MOKOMOKO PET PHOTOGRAPHY</p>
+        <h1 id="form-title">寵物攝影預約單</h1>
+        <p>女攝影師小魚・療癒系寫真<br />填寫前請先參閱 Instagram：mkmkpet 的拍攝作品。</p>
+      </section>
+
+      <form
+        id="booking-form"
+        class="booking-form"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfUT7IxV-mO5zFyVAb08hzvACuDfe3olZ80Co4NhulU3hS8Hg/formResponse"
+        method="post"
+        target="google-form-response"
+        novalidate
+      >
+        <div class="field" data-field="pet-name">
+          <label class="question" for="pet-name">❶ 毛孩暱稱 <span aria-hidden="true">＊</span></label>
+          <input id="pet-name" name="entry.1663111275" type="text" autocomplete="off" required />
+          <p class="error" id="pet-name-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field choice-field" data-field="pet-type">
+          <legend class="question">❷ 毛孩品種 <span aria-hidden="true">＊</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="entry.1815331256" value="狗狗（戶外）" required /><span>狗狗（戶外）</span></label>
+            <label class="choice"><input type="radio" name="entry.1815331256" value="貓貓（戶外/室內棚拍）" /><span>貓貓（戶外/室內棚拍）</span></label>
+            <label class="choice"><input type="radio" name="entry.1815331256" value="天竺鼠（特寵須室內棚拍）" /><span>天竺鼠（特寵須室內棚拍）</span></label>
+            <label class="choice"><input type="radio" name="entry.1815331256" value="兔子（特寵須室內棚拍）" /><span>兔子（特寵須室內棚拍）</span></label>
+            <label class="choice"><input type="radio" name="entry.1815331256" value="爬蟲（特寵須室內棚拍）" /><span>爬蟲（特寵須室內棚拍）</span></label>
+            <label class="choice choice-other"><input type="radio" name="entry.1815331256" value="__other_option__" data-other-target="pet-type-other" /><span>其他</span></label>
+            <input class="other-input" id="pet-type-other" name="entry.1815331256.other_option_response" type="text" placeholder="請填寫毛孩品種" aria-label="其他毛孩品種" disabled />
+          </div>
+          <p class="error" id="pet-type-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="field" data-field="age">
+          <label class="question" for="age">❸ 歲數 <span aria-hidden="true">＊</span></label>
+          <select id="age" name="entry.1286144081" required>
+            <option value="">請選擇</option>
+            <option value="0（11個月內)">0（11個月內)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16以上">16以上</option>
+          </select>
+          <p class="error" id="age-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field choice-field" data-field="notes">
+          <legend class="question">❸ 備註 <span aria-hidden="true">＊</span></legend>
+          <p class="hint">如不落地、全程牽繩、對陌生人敏感、不理解指令</p>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="entry.622904434" value="無" required /><span>無</span></label>
+            <label class="choice choice-other"><input type="radio" name="entry.622904434" value="__other_option__" data-other-target="notes-other" /><span>其他</span></label>
+            <textarea class="other-input" id="notes-other" name="entry.622904434.other_option_response" rows="3" placeholder="請填寫備註" aria-label="其他備註" disabled></textarea>
+          </div>
+          <p class="error" id="notes-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="field" data-field="instagram">
+          <label class="question" for="instagram">❹ 飼主 Instagram 帳號 <span aria-hidden="true">＊</span></label>
+          <p class="hint">請如實填寫正確 ID。</p>
+          <input id="instagram" name="entry.1343958423" type="text" autocomplete="off" inputmode="text" required />
+          <p class="error" id="instagram-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="field choice-field" data-field="source">
+          <legend class="question">❺ 請問您是透過什麼平台認識 𝐌𝐎𝐊𝐎𝐌𝐎𝐊𝐎 呢？ <span aria-hidden="true">＊</span></legend>
+          <p class="hint">感謝答覆，這對我們來說非常重要ꜝꜝ</p>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="entry.474112390" value="從 Instagram 廣告看到我們的！" required /><span>從 Instagram 廣告看到我們的！</span></label>
+            <label class="choice"><input type="radio" name="entry.474112390" value="從 Threads 貼文看到我們的！" /><span>從 Threads 貼文看到我們的！</span></label>
+            <label class="choice"><input type="radio" name="entry.474112390" value="曾體驗過我們拍攝的親友推薦的！" /><span>曾體驗過我們拍攝的親友推薦的！</span></label>
+            <label class="choice"><input type="radio" name="entry.474112390" value="無意間在 IG Reels 上滑到的！" /><span>無意間在 IG Reels 上滑到的！</span></label>
+            <label class="choice choice-other"><input type="radio" name="entry.474112390" value="__other_option__" data-other-target="source-other" /><span>其他</span></label>
+            <input class="other-input" id="source-other" name="entry.474112390.other_option_response" type="text" placeholder="請填寫平台" aria-label="其他認識平台" disabled />
+          </div>
+          <p class="error" id="source-error" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="field choice-field confirmation" data-field="confirmation">
+          <legend class="question">感謝預約，這幾天攝影師會主動聯繫您，再麻煩請幫我留意IG陌生訊息哦！ <span aria-hidden="true">＊</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="entry.1086373769" value="我已瞭解！" required /><span>我已瞭解！</span></label>
+          </div>
+          <p class="error" id="confirmation-error" aria-live="polite"></p>
+        </fieldset>
+
+        <input type="hidden" name="fvv" value="1" />
+        <input type="hidden" name="pageHistory" value="0" />
+        <button id="submit-button" type="submit">送出預約資料</button>
+        <p class="submit-note">送出後請留意 Instagram 陌生訊息。</p>
+      </form>
+
+      <section id="success" class="success" aria-live="polite" hidden>
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <h2>預約資料已送出</h2>
+        <p>謝謝你，攝影師會在這幾天透過 Instagram 主動聯繫。</p>
+      </section>
+    </main>
+
+    <iframe id="google-form-response" name="google-form-response" title="表單送出結果" hidden></iframe>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
